@@ -1,54 +1,57 @@
-money = 1600
-def food(amount):
-   expense = amount - 300
-   return expense
-def invest(amount):
-    increase = amount + 150
-    return increase
+class TakeDetails:
+    def __init__(self, name, surname, idNum):
+        self.name = name
+        self.surname = surname
+        self.idNum = idNum
 
-print("Hello your initial balance is :R",money," After buying food you will be left with ",food(money))
-print("After you invest your money your total will be :R",invest(food(money)))
+    def register(self):
+        clientName = self.name
+        clientSurname = self.surname
+        return clientName, clientSurname
 
-
-if(invest(food(money)) == 1650):
-    print("you managed invest and gain a little money even though it is not equal to the initial amout")
-elif(invest(food(money)) < 1650):
-    print("You wasted money bruh")
-
-
-list = [10,5,5]
-print(len(list))
-
-list[1] = 10
-print(list)
-
-list.append(25)
-print(list)
-
-del(list[0])
-print(list)
+    def idConfirm(self):
+        if self.idNum.isdigit() and len(self.idNum) == 13:
+            print("ID number is valid.")
+        else:
+            print("Your ID number is invalid.")
 
 
-dict = {"Tlotliso": 2000,"Phantsha": 2020}
+class addToClient:
+    def __init__(self, name, surname, idNum):
+        self.name = name
+        self.surname = surname
+        self.idNum = idNum
 
-print(dict["Phantsha"])
-print(dict.keys())
-print(dict.values())
+    def add(self):
+        clients = []
+        clients.append(self.name)
+        clients.append(self.surname)
+        clients.append(self.idNum)
+        client_tuple = (clients[0], clients[1], clients[2])
+        return client_tuple
+    idNum = int
+    check = int
 
-print("Tlotliso" in dict)
+    while check != 0:
 
 
-lists = [10,20,30]
-i = 0
-for list in lists:
-    print(list)
-    i = i+1
-    print(i)
+        name = input("Enter your name: ")
+        surname = input("Enter your surname: ")
+        idnum = input("Enter your ID number: ")
+        check = input("Enter your Lucky")
 
-class mpeoa(object):
 
-   def display(name):
-     alert = print("Hello im working")
-     return alert
-Tlotliso = "Tlotliso"
-show = mpeoa("Tlotliso")
+name = str
+surname = str
+idnum = int
+
+reg = TakeDetails(name, surname, idnum)
+reg.register()
+reg.idConfirm()
+
+dic = addToClient(name, surname, idnum)
+client_tuple = dic.add()
+ClientDic = {"Client": client_tuple}
+
+print("Here are your clients:", ClientDic["Client"])
+
