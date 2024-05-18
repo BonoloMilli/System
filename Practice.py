@@ -8,3 +8,6 @@ class TakeDetails:
         clientName = self.name
         clientSurname = self.surname
         return clientName, clientSurname
+    def reg(self):
+       clientName = self.name
+
