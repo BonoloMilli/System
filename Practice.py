@@ -3,11 +3,11 @@ class TakeDetails:
         self.name = name
         self.surname = surname
         self.idNum = idNum
-
+        
     def register(self):
-        clientName = self.name
-        clientSurname = self.surname
-        return clientName, clientSurname
-    def reg(self):
+       for studNo in list:
+         if studNo === promptedStudNo:
+
+       def reg(self):
        clientName = self.name
 
