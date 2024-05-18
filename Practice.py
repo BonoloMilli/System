@@ -7,9 +7,16 @@ class Clients(object):
         if self.studentNum not in students:
             print("You are not in the system")
 
-# Example usage
+
 client = Clients("123")
+
 client.compare()  
 
 client = Clients("214")
 client.compare()  
+
+client.compare() 
+
+client = Clients("214")
+client.compare() 
+
