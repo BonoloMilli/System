@@ -24,7 +24,7 @@ class Clients(object):
                student['mak2'] = self.mark2
                print(f"{self.studentNum} {student['mak1']} {student['mak2']}") 
          else:
-                ("Invalid marks/s")
+                print("Invalid marks/s")
                                 
 
 stud = int(input("Enter Student Number:"))
